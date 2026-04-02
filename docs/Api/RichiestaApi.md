@@ -1,54 +1,62 @@
-# Swagger\Client\RichiestaApi
+# IBSWebCO\Sprint\RichiestaApi
 
-All URIs are relative to *https://api.sprintco.it/v2*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**v2richiesteDestroy**](RichiestaApi.md#v2richiestedestroy) | **DELETE** /richieste/{richiesta} | Remove the specified resource from storage
-[**v2richiesteIndex**](RichiestaApi.md#v2richiesteindex) | **GET** /richieste | Display a listing of the resource
-[**v2richiesteShow**](RichiestaApi.md#v2richiesteshow) | **GET** /richieste/{richiesta} | Display the specified resource
-[**v2richiesteStore**](RichiestaApi.md#v2richiestestore) | **POST** /richieste | Store a newly created resource in storage
-[**v2richiesteUpdate**](RichiestaApi.md#v2richiesteupdate) | **PUT** /richieste/{richiesta} | Update the specified resource in storage
 
-# **v2richiesteDestroy**
-> v2richiesteDestroy($richiesta)
+All URIs are relative to https://api.sprintco.it/v2, except if the operation defines another base path.
+
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**v2richiesteDestroy()**](RichiestaApi.md#v2richiesteDestroy) | **DELETE** /richieste/{richiesta} | Remove the specified resource from storage |
+| [**v2richiesteIndex()**](RichiestaApi.md#v2richiesteIndex) | **GET** /richieste | Display a listing of the resource |
+| [**v2richiesteShow()**](RichiestaApi.md#v2richiesteShow) | **GET** /richieste/{richiesta} | Display the specified resource |
+| [**v2richiesteStore()**](RichiestaApi.md#v2richiesteStore) | **POST** /richieste | Store a newly created resource in storage |
+| [**v2richiesteUpdate()**](RichiestaApi.md#v2richiesteUpdate) | **PUT** /richieste/{richiesta} | Update the specified resource in storage |
+
+
+## `v2richiesteDestroy()`
+
+```php
+v2richiesteDestroy($richiesta): object
+```
 
 Remove the specified resource from storage
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: http
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\RichiestaApi(
+// Configure Bearer authorization: http
+$config = IBSWebCO\Sprint\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new IBSWebCO\Sprint\Api\RichiestaApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$richiesta = new \Swagger\Client\Model\null(); //  | The richiesta r1 codric
+$richiesta = 'richiesta_example'; // string | The richiesta r1 codric
 
 try {
-    $apiInstance->v2richiesteDestroy($richiesta);
+    $result = $apiInstance->v2richiesteDestroy($richiesta);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RichiestaApi->v2richiesteDestroy: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **richiesta** | [****](../Model/.md)| The richiesta r1 codric |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **richiesta** | **string**| The richiesta r1 codric | |
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -56,26 +64,33 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **v2richiesteIndex**
-> v2richiesteIndex()
+## `v2richiesteIndex()`
+
+```php
+v2richiesteIndex(): object
+```
 
 Display a listing of the resource
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: http
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\RichiestaApi(
+// Configure Bearer authorization: http
+$config = IBSWebCO\Sprint\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new IBSWebCO\Sprint\Api\RichiestaApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -83,19 +98,20 @@ $apiInstance = new Swagger\Client\Api\RichiestaApi(
 );
 
 try {
-    $apiInstance->v2richiesteIndex();
+    $result = $apiInstance->v2richiesteIndex();
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RichiestaApi->v2richiesteIndex: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -103,50 +119,57 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **v2richiesteShow**
-> v2richiesteShow($richiesta)
+## `v2richiesteShow()`
+
+```php
+v2richiesteShow($richiesta): object
+```
 
 Display the specified resource
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: http
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\RichiestaApi(
+// Configure Bearer authorization: http
+$config = IBSWebCO\Sprint\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new IBSWebCO\Sprint\Api\RichiestaApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$richiesta = new \Swagger\Client\Model\null(); //  | The richiesta r1 codric
+$richiesta = 'richiesta_example'; // string | The richiesta r1 codric
 
 try {
-    $apiInstance->v2richiesteShow($richiesta);
+    $result = $apiInstance->v2richiesteShow($richiesta);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RichiestaApi->v2richiesteShow: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **richiesta** | [****](../Model/.md)| The richiesta r1 codric |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **richiesta** | **string**| The richiesta r1 codric | |
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -154,50 +177,57 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **v2richiesteStore**
-> v2richiesteStore($body)
+## `v2richiesteStore()`
+
+```php
+v2richiesteStore($v2richiesteStoreRequest): object
+```
 
 Store a newly created resource in storage
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: http
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\RichiestaApi(
+// Configure Bearer authorization: http
+$config = IBSWebCO\Sprint\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new IBSWebCO\Sprint\Api\RichiestaApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\RichiesteBody(); // \Swagger\Client\Model\RichiesteBody | 
+$v2richiesteStoreRequest = new \IBSWebCO\Sprint\Model\V2richiesteStoreRequest(); // \IBSWebCO\Sprint\Model\V2richiesteStoreRequest
 
 try {
-    $apiInstance->v2richiesteStore($body);
+    $result = $apiInstance->v2richiesteStore($v2richiesteStoreRequest);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RichiestaApi->v2richiesteStore: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\RichiesteBody**](../Model/RichiesteBody.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **v2richiesteStoreRequest** | [**\IBSWebCO\Sprint\Model\V2richiesteStoreRequest**](../Model/V2richiesteStoreRequest.md)|  | |
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -205,52 +235,59 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **v2richiesteUpdate**
-> v2richiesteUpdate($body, $richiesta)
+## `v2richiesteUpdate()`
+
+```php
+v2richiesteUpdate($richiesta, $v2richiesteUpdateRequest): object
+```
 
 Update the specified resource in storage
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: http
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\RichiestaApi(
+// Configure Bearer authorization: http
+$config = IBSWebCO\Sprint\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new IBSWebCO\Sprint\Api\RichiestaApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\RichiesteRichiestaBody(); // \Swagger\Client\Model\RichiesteRichiestaBody | 
-$richiesta = new \Swagger\Client\Model\null(); //  | The richiesta r1 codric
+$richiesta = 'richiesta_example'; // string | The richiesta r1 codric
+$v2richiesteUpdateRequest = new \IBSWebCO\Sprint\Model\V2richiesteUpdateRequest(); // \IBSWebCO\Sprint\Model\V2richiesteUpdateRequest
 
 try {
-    $apiInstance->v2richiesteUpdate($body, $richiesta);
+    $result = $apiInstance->v2richiesteUpdate($richiesta, $v2richiesteUpdateRequest);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RichiestaApi->v2richiesteUpdate: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\RichiesteRichiestaBody**](../Model/RichiesteRichiestaBody.md)|  |
- **richiesta** | [****](../Model/.md)| The richiesta r1 codric |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **richiesta** | **string**| The richiesta r1 codric | |
+| **v2richiesteUpdateRequest** | [**\IBSWebCO\Sprint\Model\V2richiesteUpdateRequest**](../Model/V2richiesteUpdateRequest.md)|  | |
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -258,8 +295,9 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

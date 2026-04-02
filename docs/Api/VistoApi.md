@@ -1,50 +1,57 @@
-# Swagger\Client\VistoApi
+# IBSWebCO\Sprint\VistoApi
 
-All URIs are relative to *https://api.sprintco.it/v2*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**v2vistiDestroy**](VistoApi.md#v2vistidestroy) | **DELETE** /visti/{visto} | Remove the specified resource from storage
-[**v2vistiIndex**](VistoApi.md#v2vistiindex) | **GET** /visti | Display a listing of the resource
-[**v2vistiShow**](VistoApi.md#v2vistishow) | **GET** /visti/{visto} | Display the specified resource
-[**v2vistiStore**](VistoApi.md#v2vististore) | **POST** /visti | Store a newly created resource in storage
-[**v2vistiUpdate**](VistoApi.md#v2vistiupdate) | **PUT** /visti/{visto} | Update the specified resource in storage
 
-# **v2vistiDestroy**
-> v2vistiDestroy($visto)
+All URIs are relative to https://api.sprintco.it/v2, except if the operation defines another base path.
+
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**v2vistiDestroy()**](VistoApi.md#v2vistiDestroy) | **DELETE** /visti/{visto} | Remove the specified resource from storage |
+| [**v2vistiIndex()**](VistoApi.md#v2vistiIndex) | **GET** /visti | Display a listing of the resource |
+| [**v2vistiShow()**](VistoApi.md#v2vistiShow) | **GET** /visti/{visto} | Display the specified resource |
+| [**v2vistiStore()**](VistoApi.md#v2vistiStore) | **POST** /visti | Store a newly created resource in storage |
+| [**v2vistiUpdate()**](VistoApi.md#v2vistiUpdate) | **PUT** /visti/{visto} | Update the specified resource in storage |
+
+
+## `v2vistiDestroy()`
+
+```php
+v2vistiDestroy($visto)
+```
 
 Remove the specified resource from storage
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: http
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\VistoApi(
+// Configure Bearer authorization: http
+$config = IBSWebCO\Sprint\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new IBSWebCO\Sprint\Api\VistoApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$visto = new \Swagger\Client\Model\null(); //  | The visto cod
+$visto = 'visto_example'; // string | The visto cod
 
 try {
     $apiInstance->v2vistiDestroy($visto);
 } catch (Exception $e) {
     echo 'Exception when calling VistoApi->v2vistiDestroy: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **visto** | [****](../Model/.md)| The visto cod |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **visto** | **string**| The visto cod | |
 
 ### Return type
 
@@ -56,26 +63,33 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **v2vistiIndex**
-> v2vistiIndex()
+## `v2vistiIndex()`
+
+```php
+v2vistiIndex(): object
+```
 
 Display a listing of the resource
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: http
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\VistoApi(
+// Configure Bearer authorization: http
+$config = IBSWebCO\Sprint\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new IBSWebCO\Sprint\Api\VistoApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -83,19 +97,20 @@ $apiInstance = new Swagger\Client\Api\VistoApi(
 );
 
 try {
-    $apiInstance->v2vistiIndex();
+    $result = $apiInstance->v2vistiIndex();
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VistoApi->v2vistiIndex: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -103,50 +118,57 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **v2vistiShow**
-> v2vistiShow($visto)
+## `v2vistiShow()`
+
+```php
+v2vistiShow($visto): object
+```
 
 Display the specified resource
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: http
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\VistoApi(
+// Configure Bearer authorization: http
+$config = IBSWebCO\Sprint\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new IBSWebCO\Sprint\Api\VistoApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$visto = new \Swagger\Client\Model\null(); //  | The visto cod
+$visto = 'visto_example'; // string | The visto cod
 
 try {
-    $apiInstance->v2vistiShow($visto);
+    $result = $apiInstance->v2vistiShow($visto);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VistoApi->v2vistiShow: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **visto** | [****](../Model/.md)| The visto cod |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **visto** | **string**| The visto cod | |
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -154,50 +176,57 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **v2vistiStore**
-> v2vistiStore($body)
+## `v2vistiStore()`
+
+```php
+v2vistiStore($v2vistiStoreRequest): object
+```
 
 Store a newly created resource in storage
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: http
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\VistoApi(
+// Configure Bearer authorization: http
+$config = IBSWebCO\Sprint\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new IBSWebCO\Sprint\Api\VistoApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\VistiBody(); // \Swagger\Client\Model\VistiBody | 
+$v2vistiStoreRequest = new \IBSWebCO\Sprint\Model\V2vistiStoreRequest(); // \IBSWebCO\Sprint\Model\V2vistiStoreRequest
 
 try {
-    $apiInstance->v2vistiStore($body);
+    $result = $apiInstance->v2vistiStore($v2vistiStoreRequest);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VistoApi->v2vistiStore: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\VistiBody**](../Model/VistiBody.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **v2vistiStoreRequest** | [**\IBSWebCO\Sprint\Model\V2vistiStoreRequest**](../Model/V2vistiStoreRequest.md)|  | |
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -205,52 +234,59 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **v2vistiUpdate**
-> v2vistiUpdate($body, $visto)
+## `v2vistiUpdate()`
+
+```php
+v2vistiUpdate($visto, $v2vistiUpdateRequest): object
+```
 
 Update the specified resource in storage
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: http
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\VistoApi(
+// Configure Bearer authorization: http
+$config = IBSWebCO\Sprint\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new IBSWebCO\Sprint\Api\VistoApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\VistiVistoBody(); // \Swagger\Client\Model\VistiVistoBody | 
-$visto = new \Swagger\Client\Model\null(); //  | The visto cod
+$visto = 'visto_example'; // string | The visto cod
+$v2vistiUpdateRequest = new \IBSWebCO\Sprint\Model\V2vistiUpdateRequest(); // \IBSWebCO\Sprint\Model\V2vistiUpdateRequest
 
 try {
-    $apiInstance->v2vistiUpdate($body, $visto);
+    $result = $apiInstance->v2vistiUpdate($visto, $v2vistiUpdateRequest);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VistoApi->v2vistiUpdate: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\VistiVistoBody**](../Model/VistiVistoBody.md)|  |
- **visto** | [****](../Model/.md)| The visto cod |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **visto** | **string**| The visto cod | |
+| **v2vistiUpdateRequest** | [**\IBSWebCO\Sprint\Model\V2vistiUpdateRequest**](../Model/V2vistiUpdateRequest.md)|  | |
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -258,8 +294,9 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

@@ -1,23 +1,25 @@
 {
-    "name": "git_user_id/git_repo_id",
-    "description": "",
+    "name": "ibswebco/sprit-sdk-php",
+    "description": "IBSWebCO API Sprint per l'automazione delle richieste di Certificati di origine e Visti alle Camera di commercio italiane (servizio Commercio Estero)",
     "keywords": [
-        "swagger",
+        "openapitools",
+        "openapi-generator",
+        "openapi",
         "php",
         "sdk",
         "rest",
         "api"
     ],
-    "homepage": "http://swagger.io",
-    "license": "proprietary",
+    "homepage": "https://openapi-generator.tech",
+    "license": "unlicense",
     "authors": [
         {
-            "name": "Swagger and contributors",
-            "homepage": "https://github.com/swagger-api/swagger-codegen"
+            "name": "OpenAPI",
+            "homepage": "https://openapi-generator.tech"
         }
     ],
     "require": {
-        "php": "^7.4 || ^8.0",
+        "php": "^8.1",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
@@ -29,9 +31,9 @@
         "friendsofphp/php-cs-fixer": "^3.5"
     },
     "autoload": {
-        "psr-4": { "Swagger\\Client\\" : "lib/" }
+        "psr-4": { "IBSWebCO\\Sprint\\" : "src/" }
     },
     "autoload-dev": {
-        "psr-4": { "Swagger\\Client\\" : "test/" }
+        "psr-4": { "IBSWebCO\\Sprint\\Test\\" : "test/" }
     }
 }
